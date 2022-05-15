@@ -3,10 +3,15 @@ import React from 'react'
 
 export default function App() {
   return (
-    <View>
+    <View style={styles.screen}>
       <Text>App</Text>
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  screen:{
+    justifyContent:'center',
+    alignItems:'center',
+  }
+})
