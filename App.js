@@ -5,7 +5,7 @@ import Icons from 'react-native-vector-icons/Feather';
 export default function App() {
   return (
     <View style={styles.screen}>
-      <Text>
+      <Text style={styles.text}>
         Apps
         <Icons name="mail" size={30} color="red" />
         {/* test icons */}
@@ -18,5 +18,8 @@ const styles = StyleSheet.create({
   screen: {
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  text: {
+    fontFamily: 'Lato-Black',
   },
 });
