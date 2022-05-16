@@ -8,6 +8,7 @@ export default function App() {
       <Text>
         Apps
         <Icons name="mail" size={30} color="red" />
+        {/* test icons */}
       </Text>
     </View>
   );
