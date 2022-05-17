@@ -1,25 +1,5 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Icons from 'react-native-vector-icons/Feather';
-
+import Home from './app/screens/Home';
 export default function App() {
-  return (
-    <View style={styles.screen}>
-      <Text style={styles.text}>
-        Apps
-        <Icons name="mail" size={30} color="red" />
-        {/* test icons */}
-      </Text>
-    </View>
-  );
+  return <Home />;
 }
-
-const styles = StyleSheet.create({
-  screen: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontFamily: 'Lato-Black',
-  },
-});
