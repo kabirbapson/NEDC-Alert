@@ -1,18 +1,18 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {COLORS} from '../../assets/colors';
-import Feather from 'react-native-vector-icons/Feather';
+import Feather from 'react-native-vector-icons/MaterialCommunityIcons';
 import {hp, wp} from '../utils/dpTopx';
 
-function Card({cardStyle, cardItem}) {
+function Card({cardStyle, cardItem, iconName}) {
   return (
     <View style={[styles.card, cardStyle]}>
       <View style={styles.rectRadius} cardStyle>
-        <Feather name="mail" color="red" size={hp(30)} />
+        <Feather name="eye" color="white" size={hp(30)} />
       </View>
-      <View style={styles.texty}></View>
-        <Text>{cardItem.title}</Text>
-        <Text>{cardItem.subtitle}</Text>
+      <View style={styles.texts}>
+        <Text style={styles.title}>{cardItem.title}</Text>
+        <Text style={styles.subtitle}>{cardItem.subtitle}</Text>
       </View>
     </View>
   );
@@ -33,8 +33,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  texty:{
-    padding:10
-  }
+  texts: {
+    marginVertical: 10,
+  },
+  title: {
+    fontFamily: 'Lato-Black',
+    marginVertical: 5,
+    fontSize: 16,
+    fontWeight: '700',
+  },
+  subtitle: {
+    fontFamily: 'Lato-Regular',
+    fontSize: 14,
+  },
 });
 export default Card;
