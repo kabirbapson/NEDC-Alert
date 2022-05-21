@@ -1,14 +1,14 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {COLORS} from '../../assets/colors';
-import Feather from 'react-native-vector-icons/MaterialCommunityIcons';
+import Feather from 'react-native-vector-icons/Feather';
 import {hp, wp} from '../utils/dpTopx';
 
 function CardComponent({cardStyle, cardItem, iconName}) {
   return (
     <View style={[styles.card, cardStyle]}>
       <View style={styles.rectRadius} cardStyle>
-        <Feather name="eye" color="white" size={hp(30)} />
+        <Feather name={iconName} color="white" size={hp(30)} />
       </View>
       <View style={styles.texts}>
         <Text style={styles.title}>{cardItem.title}</Text>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     width: wp(40),
     height: hp(40),
     backgroundColor: COLORS.darkCyan,
-    borderRadius: hp(8),
+    borderRadius: hp(20),
     justifyContent: 'center',
     alignItems: 'center',
   },

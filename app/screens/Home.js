@@ -9,9 +9,9 @@ import {
 } from 'react-native';
 import {COLORS} from '../../assets/colors';
 import {hp, wp} from '../utils/dpTopx';
-import Feather from 'react-native-vector-icons/Feather';
 import CardComponent from '../components/CardComponent';
 import HeaderComponent from '../components/HeaderComponent';
+import TitleTextComponent from '../components/TitleTextComponent';
 
 const DATA = [
   {
@@ -30,7 +30,7 @@ const DATA = [
   },
   {
     id: 3,
-    iconName: 'clock',
+    iconName: 'alert-circle',
     title: 'Happening Now',
     subtitle: "What's happening in your area?",
     bgColor: COLORS.lightOrange,
@@ -66,7 +66,8 @@ function Home() {
       </View>
       <View style={styles.container2}>
         {/* <View style={styles.centre}> */}
-        <Text style={styles.centreText}>Emergency Assistance</Text>
+        {/* <Text style={styles.centreText}>Emergency Assistance</Text> */}
+        <TitleTextComponent />
         {/* </View> */}
         <FlatList
           data={DATA}
