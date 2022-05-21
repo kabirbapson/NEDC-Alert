@@ -65,10 +65,11 @@ function Home() {
         <HeaderComponent />
       </View>
       <View style={styles.container2}>
-        {/* <View style={styles.centre}> */}
-        {/* <Text style={styles.centreText}>Emergency Assistance</Text> */}
-        <TitleTextComponent />
-        {/* </View> */}
+        <TitleTextComponent
+          textStyle={styles.textEmergencyAssistance}
+          textTitle={'Emergency Assistance'}
+        />
+
         <FlatList
           data={DATA}
           renderItem={renderItem}
@@ -107,16 +108,13 @@ const styles = StyleSheet.create({
     fontFamily: 'Lato-Black',
     fontSize: 18,
   },
-  footer: {
-    // position: 'absolute',
-    // bottom: 20,
-    // // flexDirection: 'row',
-    // backgroundColor: 'red',
-    backgroundColor: '#264653',
-    width: 322,
-    height: 60,
-    borderRadius: 15,
-    // marginBottom: 20,
+  // footer: {
+  //   backgroundColor: '#264653',
+  //   width: 322,
+  //   borderRadius: 15,
+  // },
+  textEmergencyAssistance: {
+    paddingVertical: 10,
   },
 });
 export default Home;

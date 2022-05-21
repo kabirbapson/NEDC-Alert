@@ -1,17 +1,13 @@
-import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
+import {hp, wp} from '../utils/dpTopx';
 
-function TitleTextComponent() {
-  return (
-    <View>
-      <Text style={styles.centreText}>Emergency Assistance</Text>
-    </View>
-  );
+function TitleTextComponent({textTitle, textStyle}) {
+  return <Text style={[styles.centreText, textStyle]}>{textTitle}</Text>;
 }
 const styles = StyleSheet.create({
   centreText: {
-    paddingVertical: 10,
-    paddingRight: hp(150),
+    width: '100%',
     fontFamily: 'Lato-Black',
     fontSize: 18,
   },
