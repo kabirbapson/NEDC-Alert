@@ -8,10 +8,10 @@ import {
   ScrollView,
 } from 'react-native';
 import {COLORS} from '../../assets/colors';
-import Card from '../components/Card';
 import {hp, wp} from '../utils/dpTopx';
 import Feather from 'react-native-vector-icons/Feather';
-
+import CardComponent from '../components/CardComponent';
+import HeaderComponent from '../components/HeaderComponent';
 
 const DATA = [
   {
@@ -45,7 +45,7 @@ const DATA = [
 ];
 
 const Item = ({item}) => (
-  <Card
+  <CardComponent
     cardItem={item}
     iconName={item.iconName}
     cardStyle={{
@@ -62,21 +62,7 @@ function Home() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <View style={styles.wrapProfile}>
-           <Image
-              style={styles.imageR}
-              source={require('../../assets/images/nedc_logo.jpg')}
-            />
-          <Text style={styles.nedcA}
-             >{"NEDC\nALERT"}</Text>
-          <Feather name='bell' size={30}/>
-          <Feather name='mail' size={30}/>
-          <Image
-              style={styles.imageR}
-              source={require('../../assets/images/nedc_logo.jpg')}
-            /><Text>jjfjfjf</Text>
-          <Text>jjfjfjf</Text>
-        </View>
+        <HeaderComponent />
       </View>
       <View style={styles.container2}>
         {/* <View style={styles.centre}> */}
@@ -109,22 +95,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#264653',
     width: '100%',
     height: hp(297),
-    paddingHorizontal: 20,
-  },
-  wrapProfile: {
-    marginLeft: hp(20),
-    marginTop:hp(20),
+    paddingHorizontal: hp(25),
     flexDirection: 'row',
-  },
-  imageR: {
-    borderRadius: 20,
-  },
-  nedcA:{
-    marginTop:hp(5),
-    marginLeft: hp(6),
-    fontFamily:'Lato-Black',
-    fontSize:16,
-    color:'#0D703A'
+    justifyContent: 'space-between',
+    // alignItems: 'center',
   },
   centreText: {
     paddingVertical: 10,

@@ -4,7 +4,7 @@ import {COLORS} from '../../assets/colors';
 import Feather from 'react-native-vector-icons/MaterialCommunityIcons';
 import {hp, wp} from '../utils/dpTopx';
 
-function Card({cardStyle, cardItem, iconName}) {
+function CardComponent({cardStyle, cardItem, iconName}) {
   return (
     <View style={[styles.card, cardStyle]}>
       <View style={styles.rectRadius} cardStyle>
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
-export default Card;
+export default CardComponent;
