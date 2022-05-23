@@ -7,6 +7,10 @@ import Button from './Button';
 import ButtonComponent from './ButtonComponent';
 import TitleTextComponent from './TitleTextComponent';
 function HeaderComponent(props) {
+  const sendTipsAlert = () => {
+    alert('Send tips');
+  };
+
   return (
     <View>
       <View style={styles.logo}>
@@ -40,10 +44,14 @@ function HeaderComponent(props) {
           }
         />
         <View style={styles.headerButtons}>
-          <ButtonComponent title="QUICK ALERT" />
+          <ButtonComponent
+            title="QUICK ALERT"
+            onPress={() => sendTipsAlert()}
+          />
           <ButtonComponent
             title="SEND TIPS"
             buttStyle={{backgroundColor: '#F4A261'}}
+            onPress={sendTipsAlert}
           />
         </View>
       </View>
