@@ -35,7 +35,6 @@ export default function MainContainer() {
             }
             return <IonicIcons name={iconName} sizee={size} color={color} />;
           },
-
           tabBarActiveTintColor: 'tomato',
           tabBarInactiveTintColor: 'grey',
           tabBarLabelStyle: {

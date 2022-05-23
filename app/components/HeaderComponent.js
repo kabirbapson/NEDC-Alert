@@ -3,6 +3,8 @@ import {Text, View, StyleSheet, Image} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import {COLORS} from '../../assets/colors';
 import {hp, wp} from '../utils/dpTopx';
+import Button from './Button';
+import ButtonComponent from './ButtonComponent';
 import TitleTextComponent from './TitleTextComponent';
 function HeaderComponent(props) {
   return (
@@ -37,15 +39,24 @@ function HeaderComponent(props) {
             'your direct link to North-East\n Development Commission...'
           }
         />
+        <View style={styles.headerButtons}>
+          <ButtonComponent title="QUICK ALERT" />
+          <ButtonComponent
+            title="SEND TIPS"
+            buttStyle={{backgroundColor: 'green'}}
+          />
+        </View>
+        <Button text="Hello NEDC" />
       </View>
     </View>
   );
 }
 const styles = StyleSheet.create({
   logo: {
-    marginLeft: hp(25),
-    marginTop: hp(25),
+    marginLeft: hp(10),
+    marginTop: hp(20),
     flexDirection: 'row',
+    width: wp(322),
   },
   logoNEDC: {
     flexDirection: 'row',
@@ -55,7 +66,7 @@ const styles = StyleSheet.create({
   },
   imageP: {
     marginHorizontal: 5,
-    borderRadius: 10,
+    borderRadius: 15,
   },
   nedcA: {
     marginTop: hp(5),
@@ -65,10 +76,9 @@ const styles = StyleSheet.create({
     color: '#0D703A',
   },
   wrapProfile: {
-    marginLeft: hp(70),
+    marginLeft: hp(110),
     marginTop: hp(10),
     flexDirection: 'row',
-    marginHorizontal: 10,
   },
   featherIcon: {
     // flexDirection:'row',
@@ -77,7 +87,7 @@ const styles = StyleSheet.create({
   welcomeTitle: {
     width: '100%',
     marginTop: 50,
-    marginLeft: 20,
+    marginLeft: 10,
   },
   textTitleEA: {
     marginVertical: 10,
@@ -88,6 +98,12 @@ const styles = StyleSheet.create({
   textSubTitle: {
     fontSize: 14,
     color: 'white',
+  },
+  headerButtons: {
+    flexDirection: 'row',
+  },
+  sendTips: {
+    backgroundColor: 'red',
   },
 });
 export default HeaderComponent;

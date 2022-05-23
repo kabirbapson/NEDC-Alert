@@ -7,13 +7,9 @@ import NavBottomBar from './app/navigations/NavBottomBar';
 
 export default function App() {
   return (
-    <>
-      <StatusBar>
-        <NavigationContainer>
-          {/* <ScreenNavigation /> */}
-          <NavBottomBar />
-        </NavigationContainer>
-      </StatusBar>
-    </>
+    <NavigationContainer>
+      {/* <ScreenNavigation /> */}
+      <NavBottomBar />
+    </NavigationContainer>
   );
 }

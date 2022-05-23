@@ -14,6 +14,7 @@ import CardComponent from '../components/CardComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import TitleTextComponent from '../components/TitleTextComponent';
 import NavBottomBar from '../navigations/NavBottomBar';
+import ButtonComponent from '../components/ButtonComponent';
 
 const DATA = [
   {
@@ -77,6 +78,7 @@ function Home({navigation}) {
           renderItem={renderItem}
           keyExtractor={item => item.id}
           numColumns={2}
+          showsVerticalScrollIndicator={false}
         />
       </View>
       {/* <TouchableOpacity
@@ -105,22 +107,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#264653',
     width: '100%',
     height: hp(297),
-    paddingHorizontal: hp(25),
+    paddingHorizontal: hp(10),
     flexDirection: 'row',
     justifyContent: 'space-between',
     // alignItems: 'center',
   },
-  centreText: {
-    paddingVertical: 10,
-    paddingRight: hp(150),
-    fontFamily: 'Lato-Black',
-    fontSize: 18,
-  },
-  // footer: {
-  //   backgroundColor: '#264653',
-  //   width: 322,
-  //   borderRadius: 15,
-  // },
   textEmergencyAssistance: {
     paddingVertical: 10,
   },
