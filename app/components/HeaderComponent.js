@@ -13,7 +13,7 @@ function HeaderComponent(props) {
         <View style={styles.logoNEDC}>
           <Image
             style={styles.imageR}
-            source={require('../../assets/images/nedc_logo.jpg')}
+            source={require('../../assets/images/logopng.png')}
           />
           <Text style={styles.nedcA}>{'NEDC\nALERT'}</Text>
         </View>
@@ -43,10 +43,9 @@ function HeaderComponent(props) {
           <ButtonComponent title="QUICK ALERT" />
           <ButtonComponent
             title="SEND TIPS"
-            buttStyle={{backgroundColor: 'green'}}
+            buttStyle={{backgroundColor: '#F4A261'}}
           />
         </View>
-        <Button text="Hello NEDC" />
       </View>
     </View>
   );
@@ -74,6 +73,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Lato-Black',
     fontSize: 16,
     color: '#0D703A',
+    // letterSpacing: 2,
   },
   wrapProfile: {
     marginLeft: hp(110),
