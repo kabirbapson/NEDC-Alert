@@ -6,12 +6,14 @@ import {
   Text,
   FlatList,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import {COLORS} from '../../assets/colors';
 import {hp, wp} from '../utils/dpTopx';
 import CardComponent from '../components/CardComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import TitleTextComponent from '../components/TitleTextComponent';
+import NavBottomBar from '../navigations/NavBottomBar';
 
 const DATA = [
   {
@@ -56,7 +58,7 @@ const Item = ({item}) => (
   />
 );
 
-function Home() {
+function Home({navigation}) {
   const renderItem = ({item}) => <Item item={item} />;
 
   return (
@@ -76,21 +78,27 @@ function Home() {
           keyExtractor={item => item.id}
           numColumns={2}
         />
-
-        <View style={styles.footer}>
-          <Text>Hheyyy</Text>
-        </View>
       </View>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Profile')}
+        style={{position: 'absolute', bottom: 30, padding: 10, borderWidth: 2}}>
+        <Text>Profile</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 const styles = StyleSheet.create({
+  footer: {
+    position: 'absolute',
+    bottom: 0,
+  },
   container: {
     alignItems: 'center',
     backgroundColor: '#e5e5e5',
     flex: 1,
   },
   container2: {
+    flex: 1,
     paddingHorizontal: 20,
   },
   header: {
