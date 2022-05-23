@@ -9,8 +9,10 @@ import Home from '../screens/Home';
 import Location from '../screens/Location';
 import Profile from '../screens/Profile';
 import NavBottomBar from './NavBottomBar';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function ScreenNavigation() {
   return (
@@ -18,6 +20,11 @@ export default function ScreenNavigation() {
       <Stack.Screen
         name="HomeBottomBar"
         component={NavBottomBar}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Settings"
+        component={Profile}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

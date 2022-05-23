@@ -79,11 +79,11 @@ function Home({navigation}) {
           numColumns={2}
         />
       </View>
-      <TouchableOpacity
-        onPress={() => navigation.navigate('Profile')}
+      {/* <TouchableOpacity
+        navigationnavigation
         style={{position: 'absolute', bottom: 30, padding: 10, borderWidth: 2}}>
         <Text>Profile</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 }

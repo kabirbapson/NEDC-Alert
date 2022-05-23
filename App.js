@@ -1,15 +1,19 @@
 import React from 'react';
 import Home from './app/screens/Home';
-import {Text, View} from 'react-native';
-import Tabs from './myTestApp/navigation/tabs';
-import Buttons from './myNavBarButtons/navigations/Buttons';
-import HomeScreen from './NavTest/screens/HomeScreen';
+import {StatusBar} from 'react-native';
+
 import {NavigationContainer} from '@react-navigation/native';
-import ScreenNavigation from './app/navigations/ScreenNavigation';
+import NavBottomBar from './app/navigations/NavBottomBar';
+
 export default function App() {
   return (
-    <NavigationContainer>
-      <ScreenNavigation />
-    </NavigationContainer>
+    <>
+      <StatusBar>
+        <NavigationContainer>
+          {/* <ScreenNavigation /> */}
+          <NavBottomBar />
+        </NavigationContainer>
+      </StatusBar>
+    </>
   );
 }
