@@ -1,4 +1,4 @@
-import React from 'react';
+  § import React from 'react';
 import Home from './app/screens/Home';
 import {StatusBar} from 'react-native';
 
