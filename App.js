@@ -1,15 +1,11 @@
-  § import React from 'react';
-import Home from './app/screens/Home';
-import {StatusBar} from 'react-native';
-
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import NavBottomBar from './app/navigations/NavBottomBar';
+import ScreenNavigation from './app/navigations/ScreenNavigation';
 
 export default function App() {
   return (
     <NavigationContainer>
-      {/* <ScreenNavigation /> */}
-      <NavBottomBar />
+      <ScreenNavigation />
     </NavigationContainer>
   );
 }
