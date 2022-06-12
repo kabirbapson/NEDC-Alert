@@ -1,20 +1,10 @@
 import React from 'react';
-import {
-  View,
-  Image,
-  StyleSheet,
-  Text,
-  FlatList,
-  ScrollView,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Image, StyleSheet, Text, FlatList} from 'react-native';
 import {COLORS} from '../../assets/colors';
 import {hp, wp} from '../utils/dpTopx';
 import CardComponent from '../components/CardComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import TitleTextComponent from '../components/TitleTextComponent';
-import NavBottomBar from '../navigations/NavBottomBar';
-import ButtonComponent from '../components/ButtonComponent';
 
 const DATA = [
   {
@@ -98,6 +88,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#e5e5e5',
     flex: 1,
+    // marginLeft: 10,
   },
   container2: {
     flex: 1,
